@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="">
+    <div class="container py-4">
+        <label for="productName">productName</label><br>
+        <input class="form-control mb-3" type="text" id="productName"  > 
+        <div class="form-control text-bg-danger d-none" id="invalidName">Product Name is Invalid </div>
+
+        <label for="productPrice">productPrice</label>
+        <input class="form-control mb-3" type="text" id="productprice"> 
+
+        <label for="productCategory">productCategory</label>
+        <input class="form-control mb-3" type="text" id="productCategory"> 
+
+        <label for="productDesc">productDesc</label> 
+        <textarea class="form-control mb-3 " type="text" id="productDesc"> </textarea> 
+        
+        <button onclick="addProduct()" id="addBtn" class="btn d-block w-100 btn-info">Add Product</button>
+        <button onclick="updateProduct()"  id="updateBtn" class="btn d-none w-100 btn-info">Update Product</button>
+    </div>
+
+    <div class="w-75 mx-auto py-2">
+        <input type="text" oninput="searchProducts(this.value)" id="searchInput" placeholder="Search by name..." class="w-75 form-control mx-auto my-3 ">
+        <table class="table ">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/bootstrap.bundle.min.js"> </script>
+    <script src="Js/main.js"> </script>
+</body>
+</html>
